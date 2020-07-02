@@ -1,6 +1,6 @@
 ---
 # tasks file for hostname
   - name: Coletando fatos
-    vars:
+    set_fact:
       nome: ansible_distribution
     register: result_name     
