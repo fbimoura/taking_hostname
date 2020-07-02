@@ -3,7 +3,10 @@
   - name: Coletando fatos
     set_fact:
       nome: "{{ ansible_hostname }}"
-    register: name_result     
+    register: name_result
+
+  - debug:
+      var: name_result
 
   - name: gravando saída
     set_stats:
