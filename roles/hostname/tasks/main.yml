@@ -11,5 +11,5 @@
   - name: gravando saída
     set_stats:
       data: 
-        resultado_nome: "{{ name_result }}"
+        resultado_name: "{{ name_result.ansible_facts.nome }}"
       per_host: yes
