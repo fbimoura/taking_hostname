@@ -3,7 +3,9 @@
   - name: Coletando fatos
     set_fact:
       nome: "{{ ansible_hostname }}"
-    register: result_name     
+    register: name_result     
 
-  - debug:
-      var: result_name
+  - name: gravando saída
+    set_stats:
+      data: 
+        resultado_nome: "{{ name_result.ansible_facts.nome }}"
