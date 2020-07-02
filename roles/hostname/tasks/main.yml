@@ -1,15 +1,6 @@
 ---
 # tasks file for hostname
-- name: Coletando fatos
-  setup:
-  gather_subset:
-    - min
-  register: facts_result
-
-  # - name: Gravando saída
-  #   set_stats:
-  #     data:
-  #       resultado: "{{ ping_result.ping }}
-- name: Debugando resultado
-  debug:
-    msg: "{{ facts_result }}"
+  - name: Coletando fatos
+    vars:
+      nome: ansible_distribution
+    register: result_name     

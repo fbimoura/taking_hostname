@@ -1,7 +1,6 @@
 ---
 - name: Recuperando nome dos servidores
   hosts: all
-  gather_facts: False
 
   roles:
     - hostname
