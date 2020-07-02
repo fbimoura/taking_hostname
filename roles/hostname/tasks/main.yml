@@ -9,3 +9,4 @@
     set_stats:
       data: 
         resultado_nome: "{{ name_result.ansible_facts.nome }}"
+      per_host: yes
