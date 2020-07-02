@@ -4,3 +4,6 @@
     set_fact:
       nome: ansible_distribution
     register: result_name     
+
+  - debug:
+      var: result_name
